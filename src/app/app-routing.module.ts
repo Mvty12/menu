@@ -11,6 +11,18 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'horario',
+    loadChildren: () => import('./pages/horario/horario.module').then( m => m.HorarioPageModule)
+  },
+  {
+    path: 'actualizar',
+    loadChildren: () => import('./pages/actualizar/actualizar.module').then( m => m.ActualizarPageModule)
+  },
+  {
+    path: 'eliminar',
+    loadChildren: () => import('./pages/eliminar/eliminar.module').then( m => m.EliminarPageModule)
+  },
 ];
 
 @NgModule({
